@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<NotMyBestWork.IncapableOf>Skill Limited Work Types</NotMyBestWork.IncapableOf>
+	<NotMyBestWork.CannotDoThisWork>{0} is only capable of doing this work to a limited skill level.</NotMyBestWork.CannotDoThisWork>
+
+</LanguageData>
