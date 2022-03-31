@@ -3,12 +3,6 @@
 
 	<NotMyBestWork.IncapableOf>Skill Limited Work Types</NotMyBestWork.IncapableOf>
 	<NotMyBestWork.CannotDoThisWork>{0} is only capable of doing this work to a limited skill level.</NotMyBestWork.CannotDoThisWork>
-	
-	<NotMyBestWork.CannotPrioritizeWorkGiverDisabled>Cannot prioritize (non-violent pawn not assigned a weapon)</NotMyBestWork.CannotPrioritizeWorkGiverDisabled>
-	<NotMyBestWork.CannotPrioritizeNotAssignedToWorkType>Cannot prioritize (pawn hates and/or is not assigned to {0})</NotMyBestWork.CannotPrioritizeNotAssignedToWorkType>
 	<NotMyBestWork.IsIncapableOfViolenceLower>{0} is non-violent and not assigned a weapon</NotMyBestWork.IsIncapableOfViolenceLower>
-	
-	<NotMyBestWork.AssignedAWeapon.Label>Non-violent pawn assigned a weapon</NotMyBestWork.AssignedAWeapon.Label>
-	<NotMyBestWork.AssignedAWeapon.Explanation>A pawn who detests violence has been assigned a weapon. In the short term, this probably isn't a problem, but over time, it could lead to extreme unhappiness.</NotMyBestWork.AssignedAWeapon.Explanation>
 
 </LanguageData>
