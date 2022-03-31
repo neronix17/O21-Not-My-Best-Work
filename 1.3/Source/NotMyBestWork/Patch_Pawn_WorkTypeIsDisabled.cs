@@ -11,7 +11,7 @@ using Verse;
 namespace NotMyBestWork
 {
 	[HarmonyPatch(typeof(Pawn), "WorkTypeIsDisabled")]
-	public static class Patch_Pawn_WorkTypeIsDisabled
+	public static class Patch_Pawn_StoryTracker_WorkTypeIsDisabled
 	{
 		[HarmonyPrefix]
 		public static bool Prefix(WorkTypeDef w)

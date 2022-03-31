@@ -13,7 +13,8 @@ namespace NotMyBestWork
 	[HarmonyPatch(typeof(PawnGenerator), "GenerateSkills")]
 	public static class PawnGenerator_GenerateSkills
 	{
-		private static void Postfix(Pawn pawn)
+		[HarmonyPostfix]
+		public static void Postfix(Pawn pawn)
 		{
 			if (IsTagDisabled(pawn, WorkTags.Animals))
 			{
@@ -66,12 +67,12 @@ namespace NotMyBestWork
 			}
 		}
 
-		private static bool IsTagDisabled(Pawn pawn, WorkTags workTag)
+		public static bool IsTagDisabled(Pawn pawn, WorkTags workTag)
 		{
 			return (pawn.CombinedDisabledWorkTags & workTag) != 0;
 		}
 
-		private static void Flatten(Pawn pawn, SkillDef skill)
+		public static void Flatten(Pawn pawn, SkillDef skill)
 		{
 			pawn.skills.GetSkill(skill).Level = NotMyBestWorkMod.settings.normalLevelLimit;
 		}

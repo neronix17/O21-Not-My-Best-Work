@@ -10,8 +10,8 @@ using Verse;
 
 namespace NotMyBestWork
 {
-	[HarmonyPatch(typeof(CharacterCardUtility), "DrawCharacterCard")]
-	public static class Patch_CharacterCardUtility_DrawCharacterCard
+	[HarmonyPatch(typeof(FloatMenuMakerMap), "AddJobGiverWorkOrders")]
+	public static class Patch_FloatMenuMakerMap_AddUndraftedOrders
 	{
 		[HarmonyTranspiler]
 		public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
@@ -20,9 +20,13 @@ namespace NotMyBestWork
 			for (int i = 0; i < list.Count; i++)
 			{
 				string text = list[i].operand as string;
-				if (text == "IncapableOf")
+				if (text == "CannotPrioritizeWorkGiverDisabled")
 				{
-					list[i].operand = "NotMyBestWork.IncapableOf";
+					list[i].operand = "NotMyBestWork.CannotPrioritizeWorkGiverDisabled";
+				}
+				if (text == "CannotPrioritizeNotAssignedToWorkType")
+				{
+					list[i].operand = "NotMyBestWork.CannotPrioritizeNotAssignedToWorkType";
 				}
 			}
 			return list;

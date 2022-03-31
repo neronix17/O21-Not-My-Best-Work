@@ -13,6 +13,7 @@ namespace NotMyBestWork
 	[HarmonyPatch(typeof(SkillRecord), "CalculateTotallyDisabled")]
 	public static class Patch_SkillRecord_CalculateTotallyDisabled
 	{
+		[HarmonyPrefix]
 		public static bool Prefix()
 		{
 			return false;

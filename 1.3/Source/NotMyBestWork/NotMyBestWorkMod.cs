@@ -21,7 +21,8 @@ namespace NotMyBestWork
             mod = this;
             settings = GetSettings<NotMyBestWorkSettings>();
 
-            new Harmony("neronix17.notmybestwork.rimworld").PatchAll();
+            Harmony harmony = new Harmony("neronix17.notmybestwork.rimworld");
+            harmony.PatchAll();
 
             Log.Message(":: Not My Best Work :: 1.0.0");
         }

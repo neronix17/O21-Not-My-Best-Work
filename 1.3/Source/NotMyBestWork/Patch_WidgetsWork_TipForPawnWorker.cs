@@ -13,6 +13,7 @@ namespace NotMyBestWork
 	[HarmonyPatch(typeof(WidgetsWork), "TipForPawnWorker")]
 	public static class WidgetsWork_TipForPawnWorker
 	{
+		[HarmonyPrefix]
 		public static bool Prefix(Pawn p, WorkTypeDef wDef, ref string __result)
 		{
 			StringBuilder stringBuilder = new StringBuilder();
